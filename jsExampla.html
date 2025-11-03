@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Types of JavaScript Demo</title>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <h1>JavaScript External, Internal, Incline</h1>
+    <section>
+        <h2>
+            External Script
+        </h2>
+        <button id="extBtn">Show external Message</button>
+        <p id="extMsg"></p>
+    </section>
+    <hr />
+
+    <section>
+        <h2>Internal Script</h2>
+
+        <button id="intBtn">Show Internal message</button>
+        <p id="intMsg"></p>
+    </section>
+    <script>
+        document.getElementById('intBtn').addEventListener('click', () => {
+            document.getElementById('intMsg').textContent = 'Hi from external Javascript'
+        });
+    </script>
+
+    <section>
+        <h2>Inline Script</h2>
+        <button onclick="document.getElementById('inlMsg').textContent='Hi from inline JavaScript'">
+            Show Inline Message
+           </button>
+        <p id="inlMsg"></p>
+    </section>
+
+</body>
+
+</html>

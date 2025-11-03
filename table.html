@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>HTML tables--full</title>
+    <style>
+        table {
+            background-color: #f2f2f2;
+            text-align: center;
+            font-size: 20px;
+            border: 2px solid gray
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        This table demonstrates all table-related elements and common attributes;
+    </p>
+    Like <code>&lt;table&gt</code>,<code>&lt;caption&gt</code> etc<br><br>
+
+    <table border="1">
+        <caption>Weekdays Schedule</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th id="h-sno" scope="col" abbr="#" title="Serieal number">S.no</th>
+                <th id="h-type" scope="col" colspan="2">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td headers="h-name">Monday</td>
+                <td headers="h-type">Weekday</td>
+                <td headers="h-notes">Team stand-up at 9:00 AM.</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td headers="h-name">Tuesday</td>
+                <td headers="h-type">Weekdays</td>
+                <td header="h-notes">Code review</em>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td headers="h-name">Wednesday</td>
+                <td headers="h-type">Weekdays</td>
+                <td header="h-notes">Client Demo;<em>Lunch &amp; learn</em></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td headers="h-name">Thursday</td>
+                <td headers="h-type">Weekdays</td>
+                <td header="h-notes">Database maintenance window(6-7PM)</em>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td headers="h-name">Friday</td>
+                <td headers="h-type">Weekdays</td>
+                <td header="h-notes">Sprint retrospective</em>
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td headers="h-name">Saturday</td>
+                <td headers="n-type" rowspan="2">Weekend</td>
+                <td headers="h-notes" rowspan="2">Family time/ Personal projects</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td header="h-name">Sunday</td>
+
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Summary: Weekdays, 2 weekend days. Total rows: 7</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
