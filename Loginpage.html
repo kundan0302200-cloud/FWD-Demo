@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <title>
+        My first login page
+    </title>
+    <style>
+         :root {
+            --card-w: 430px;
+            --radius: 16px;
+            --space: 24px;
+            --primary: #5a5a5a;
+            --text-hero: #ffffff;
+            --text-muted: #7a8aaa;
+            --shadow: 0 24px 60px rgb(0, 0, 0, 0.25);
+        }
+        /*Background gradient */
+        
+        body,
+        html {
+            height: 100% 100%;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-hero);
+            background: linear-gradient( 135deg, rgba(0, 0, 0, 0.9), rgba(128, 128, 128, 0.9));
+        }
+        
+        .page-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+        }
+        
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1.2fr var(--card-w);
+            align-items: center;
+            gap: 56px;
+            padding: 48px 24px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(39px, 5.2 vw, 56px);
+            line-height: 1.05;
+            margin: 0 0 15px;
+            font-weight: 700px;
+            letter-spacing: .2px;
+        }
+        
+        .hero p {
+            font-size: clamp(16px, 2vw, 22px);
+            margin: 0;
+            opacity: .95;
+        }
+        
+        .card {
+            color: #1f2937;
+            background-color: darkgrey;
+            width: 100%;
+            max-width: var(--card-w);
+            border-radius: var(--radius);
+            box-shadow: 0 10px 24px rgba(75, 99, 237, .32);
+            ;
+            padding: 12px;
+            transition: transform 0.6s ease filter .15s ease;
+        }
+        
+        .card-title {
+            text-align: center;
+            margin: 4px 0 19px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .form {
+            display: grid;
+            gap: 14px;
+        }
+        
+        input {
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            padding: 0 96px;
+            font-size: 15px;
+            outline: none;
+            background: white;
+            transition: border-color .15s ease, box-shadow .15s ease;
+        }
+        
+        input::placeholder {
+            color: #9aa4b2;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(90. 116, 249, .15);
+        }
+        
+        input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(90, 116, 249, .15);
+        }
+        
+        .btn {
+            margin-top: 6px;
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            /* keeps it from becoming too wide in large layouts */
+            margin: 8px auto 0;
+            padding: 12px 20px;
+            height: auto;
+            box-sizing: border-box;
+            height: 48px;
+            border: 0;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(160deg, #8ceabb -11%, #378f7b 100%);
+            box-shadow: 0 10px 24px rgba(75, 99, 237, .32);
+            transition: transform 0.6s ease filter .15s ease;
+        }
+        
+        .btn:hover {
+            filter: brightness(1.05);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .muted {
+            text-align: center;
+            margin: 10px 0 0;
+            font-size: 14px;
+        }
+        
+        .link {
+            color: var(--primary-strong);
+            text-decoration: none;
+            font-weight: 600px;
+        }
+        
+        label {
+            height: 46px;
+            border-radius: 10px;
+            padding: 0 14px;
+            font-size: 15px;
+            font-weight: 600;
+            outline: none;
+            background: none;
+            transition: border-color .15s ease, box-shadow .15s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page bg" aria-hidden="true"> </div>
+    <main class="wrap">
+        <section class="hero">
+            <h1>
+                Welcome back to your workspace
+            </h1>
+            <p>Access and manage your task efficient</p>
+        </section>
+        <section class="card">
+            <h2 class="card-title"> login
+            </h2>
+            <form>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name"> <br><br>
+                <label for="email"></label> </label>
+                <input type="email" id="email" placeholder="Email"><br><br>
+                <label for="password"></label>
+                <input type="password" id="password" placeholder="Password"><br><br>
+                <button class="btn" type="submit">login</button>
+                <p class="muted">
+                    Dont have an account?
+                    <a href="#" class="link">Sign up</a>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
